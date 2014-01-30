@@ -3,5 +3,5 @@ app/tmp/*
 app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 app/webroot/maqueta/*
-app/Plugin/DebugKit/*
+#app/Plugin/DebugKit/*
 !empty
