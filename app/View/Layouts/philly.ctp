@@ -96,7 +96,7 @@
     </footer>
     <script type="text/javascript">
         var facebook = $.facebook(
-                '205539692977306',
+                '<?php echo Configure::read('Facebook.appId'); ?>',
                 true,
                 true
                 );
