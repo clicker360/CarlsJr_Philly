@@ -1,0 +1,478 @@
+/******************************************************************
+Stylesheet: Main Stylesheet
+******************************************************************/
+.onecol {
+  width: 5.801104972%;
+}
+/* 4.85%;  } /* grid_1  */
+.twocol {
+  width: 14.364640883%;
+}
+/* 13.45%; } /* grid_2  */
+.threecol {
+  width: 22.928176794%;
+}
+/* 22.05%; } /* grid_3  */
+.fourcol {
+  width: 31.491712705%;
+}
+/* 30.75%; } /* grid_4  */
+.fivecol {
+  width: 40.055248616%;
+}
+/* 39.45%; } /* grid_5  */
+.sixcol {
+  width: 48.618784527%;
+}
+/* 48%;    } /* grid_6  */
+.sevencol {
+  width: 57.182320438000005%;
+}
+/* 56.75%; } /* grid_7  */
+.eightcol {
+  width: 65.74585634900001%;
+}
+/* 65.4%;  } /* grid_8  */
+.ninecol {
+  width: 74.30939226%;
+}
+/* 74.05%; } /* grid_9  */
+.tencol {
+  width: 82.87292817100001%;
+}
+/* 82.7%;  } /* grid_10 */
+.elevencol {
+  width: 91.436464082%;
+}
+/* 91.35%; } /* grid_11 */
+.twelvecol {
+  width: 99.999999993%;
+}
+/* 100%;   } /* grid_12 */
+.onecol,
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
+  position: relative;
+  float: left;
+  margin-left: 2.762430939%;
+}
+.first {
+  margin-left: 0;
+}
+.last {
+  float: right;
+}
+.wrap {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#inicio {
+  background: url('../images/Philly-Version3-1-assets/bg_1.jpg') no-repeat;
+  height: 726px;
+}
+#inicio #logo-home {
+  margin: 50px 0 0 40px;
+}
+#paso2 {
+  color: #eeeeee;
+  background: url('../images/Philly-Version3-2-assets/background.jpg') no-repeat;
+}
+#paso2 #logo-home {
+  margin: 50px 0 0 40px;
+}
+#paso2 .philly_logo {
+  display: block;
+  margin: 50px 40px 0 0;
+  float: right;
+}
+#paso2 .usuario h2,
+#paso2 .usuario h3 {
+  text-transform: uppercase;
+}
+#paso2 .ingrediente-desc {
+  color: #fec81c;
+  font-weight: bold;
+}
+#paso2 .ingrediente-desc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#paso2 .ingrediente-desc ul li {
+  display: none;
+}
+#paso2 .ingrediente-desc ul li h3 {
+  text-transform: uppercase;
+}
+#paso2 .ingrediente-desc ul li p {
+  font-size: 15px;
+}
+#paso2 .ingrediente-desc ul li.active {
+  display: block;
+}
+#paso2 #hamburguesa {
+  background: url('../images/Philly-Version3-2-assets/Philly_CheeseSteak.png') no-repeat center 75px;
+  height: 468px;
+  width: 960px;
+  position: relative;
+}
+#paso2 #hamburguesa div.icon-ingr {
+  display: block;
+  position: absolute;
+}
+#paso2 #hamburguesa div.icon-ingr a {
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+}
+#paso2 #hamburguesa div.icon-ingr a.right-link {
+  top: 0;
+  right: 0;
+}
+#paso2 #hamburguesa div#ingr-1 {
+  background: url('../images/Philly-Version3-2-assets/bollo-ajonjoli.png') no-repeat;
+  width: 202px;
+  height: 144px;
+  top: 240px;
+  left: 107px;
+}
+#paso2 #hamburguesa div#ingr-2 {
+  background: url('../images/Philly-Version3-2-assets/carne-hamburguesa.png') no-repeat;
+  width: 172px;
+  height: 120px;
+  top: 130px;
+  left: 120px;
+}
+#paso2 #hamburguesa div#ingr-3 {
+  background: url('../images/Philly-Version3-2-assets/pimiento.png') no-repeat;
+  width: 154px;
+  height: 154px;
+  top: 30px;
+  left: 200px;
+}
+#paso2 #hamburguesa div#ingr-4 {
+  background: url('../images/Philly-Version3-2-assets/mayonesa.png') no-repeat;
+  width: 36px;
+  height: 173px;
+  top: 10;
+  left: 480px;
+}
+#paso2 #hamburguesa div#ingr-5 {
+  background: url('../images/Philly-Version3-2-assets/tiras-carne.png') no-repeat;
+  width: 151px;
+  height: 154px;
+  top: 50px;
+  right: 200px;
+}
+#paso2 #hamburguesa div#ingr-6 {
+  background: url('../images/Philly-Version3-2-assets/cebolla.png') no-repeat;
+  width: 157px;
+  height: 96px;
+  top: 124px;
+  right: 120px;
+}
+#paso2 #hamburguesa div#ingr-7 {
+  background: url('../images/Philly-Version3-2-assets/quesos.png') no-repeat;
+  width: 217px;
+  height: 68px;
+  top: 225px;
+  right: 104px;
+}
+#paso2 #hamburguesa div#mensaje-ingredientes {
+  position: absolute;
+  height: 20px;
+  bottom: 0;
+  width: 100%;
+}
+#paso2 #hamburguesa div#mensaje-ingredientes h5 {
+  margin: 0;
+}
+#paso2 #ingredientes-footer {
+  float: left;
+  width: 960px;
+  margin: 0 -15px;
+}
+#paso2 #ingredientes-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#paso2 #ingredientes-footer ul li.descr-foot {
+  float: left;
+  display: block;
+  width: 14.28%;
+  text-transform: uppercase;
+  text-align: center;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .mask {
+  display: none;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .head-ingr {
+  padding: 10px;
+  color: #eeeeee;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .body-ingr {
+  padding: 10px 0;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .body-ingr a.btn-ingr {
+  display: block;
+  width: 90%;
+  margin: 35px auto;
+  padding: 5px;
+  color: #eeeeee;
+  text-align: center;
+  text-decoration: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li.descr-foot .body-ingr a.btn-ingr:focus {
+  color: #d5d5d5;
+  text-decoration: none;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .body-ingr a.btn-ingr.solicitar {
+  display: block;
+}
+#paso2 #ingredientes-footer ul li.descr-foot .body-ingr .teregalo {
+  color: #000000;
+  padding: 5px;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-1 .head-ingr {
+  background: #d9a075;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-1 .body-ingr {
+  background: #faf3ed;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-1 .body-ingr a.btn-ingr {
+  background: #d9a075;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-1 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-1 .body-ingr a.btn-ingr:focus {
+  background: #ce844d;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-2 .head-ingr {
+  background: #987253;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-2 .body-ingr {
+  background: #efe8e2;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-2 .body-ingr a.btn-ingr {
+  background: #987253;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-2 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-2 .body-ingr a.btn-ingr:focus {
+  background: #775941;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .head-ingr {
+  background: #f1cf4c;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr {
+  background: #fcf5da;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr {
+  background: #f1cf4c;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:focus {
+  background: #edc21d;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .head-ingr {
+  background: #bdbdbd;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr {
+  background: #f0f0f0;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr {
+  background: #bdbdbd;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr:focus {
+  background: #a4a4a4;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-5 .head-ingr {
+  background: #7b4a03;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-5 .body-ingr {
+  background: #fee9cc;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-5 .body-ingr a.btn-ingr {
+  background: #7b4a03;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-5 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-5 .body-ingr a.btn-ingr:focus {
+  background: #492c02;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .head-ingr {
+  background: #a4ce35;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr {
+  background: #e5f1c5;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr {
+  background: #a4ce35;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:focus {
+  background: #85a729;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .head-ingr {
+  background: #fba744;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr {
+  background: #feedda;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr {
+  background: #fba744;
+}
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr:focus {
+  background: #fa9012;
+}
+#paso2 #ingredientes-footer ul li.descr-foot.inactivo {
+  position: relative;
+}
+#paso2 #ingredientes-footer ul li.descr-foot.inactivo .mask {
+  background: url('../images/mask_bg.png');
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#paso2 #ingredientes-footer ul li.descr-foot.activo .mask {
+    display: none;
+}
+#paso2 #ingredientes-footer ul .lotienes a.btn-ingr.solicitar {
+  display: none !important;
+}
+#paso2 #ingredientes-footer ul .lotienes .teregalo {
+  display: block !important;
+}
+#paso3 {
+  background: url('../images/Philly-Version3-1-assets/bg_1.jpg') no-repeat;
+  height: 726px;
+}
+#paso3 #logo-home {
+  margin: 50px 0 0 40px;
+}
+#paso3 .cta-2 {
+  color: #eeeeee;
+  padding: 80px 10px 0;
+}
+#paso3 .cta-2 .philly_logo {
+  display: block;
+  margin: 30px auto;
+}
+#paso3 .cta-2 h1 {
+  text-transform: uppercase;
+  font-size: 75px;
+  font-weight: bold;
+}
+#paso3 .cta-2 a.btn-cupon {
+  text-transform: uppercase;
+  background: #e71734;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  color: #eeeeee;
+  text-decoration: none;
+}
+#paso3 .cta-2 a.btn-cupon:hover,
+#paso3 .cta-2 a.btn-cupon:focus {
+  background: #b9122a;
+}
+#paso4 {
+  background: url('../images/Philly-Version3-4-assets/background.jpg') no-repeat;
+  height: 726px;
+}
+#paso4 h1#logo-home {
+  margin: 50px auto 20px;
+}
+#paso4 .cta-3 {
+  color: #eeeeee;
+}
+#paso4 .cta-3 h1 {
+  font-size: 75px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#paso4 .cta-3 h2.chessy {
+  color: #f1cf4c;
+}
+#paso4 .cta-3 h2 {
+  margin: 10px 0;
+}
+#paso4 .cupon-img {
+  margin: 20px 0;
+}
+footer.footer {
+  clear: both;
+}
+footer.footer .wrap {
+  background: #e71734;
+  color: #eeeeee;
+  padding: 10px;
+}
+footer.footer .wrap a {
+  color: #eeeeee;
+}
+footer.footer .wrap p {
+  margin: 0;
+}
+.altas {
+  text-transform: uppercase;
+}
+.cta {
+  color: #eeeeee;
+  padding: 80px 10px 0;
+  text-transform: uppercase;
+}
+.cta h2.cambiarla {
+  color: #fec81c;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 20px 0 0;
+}
+.cta .philly_logo {
+  display: block;
+  margin: 30px auto;
+}
+.cta .btn-faiz {
+  margin: 20px 0 30px;
+}
+@media only screen and (min-width: 481px) {
+  
+}
+@media only screen and (min-width: 768px) {
+  
+}
+@media only screen and (min-width: 992px) {
+  
+}
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  
+}
+/*
+iPHONE 5 MEDIA QUERY
+Want to get fancy for no good reason? Knock yourself out.
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
