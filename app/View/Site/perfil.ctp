@@ -142,8 +142,8 @@ $ingredientesTotal = $ingredientes;
                     </div>
                     <div class="body-ingr">
                         <?php if(isset($usuario['UsuarioIngrediente'][$i])){ ?>
-                            <div class="teregalo">
-                                <strong><i class="fa fa-check"></i> <?php echo $usuario['UsuarioIngrediente'][$i]['usuario_regalo_facebook_id']; ?></strong>
+                            <div class="teregalo" id="regalo-<?php echo $usuario['UsuarioIngrediente'][$i]['usuario_regalo_facebook_id']?>">
+                                <strong><i class="fa fa-check"></i><span></span></strong>
                                 <p>regaló <b><?php echo $ingredientes[$i]['Ingrediente']['nombre']; ?></b> de tu CheeseSteak</p>
                             </div>
                         <?php }else{ ?>
