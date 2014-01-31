@@ -84,14 +84,14 @@ class SiteController extends AppController {
     }
     public function perfil($facebook_id){        
         require WWW_ROOT . 'facebook/src/facebook.php';
-        //$facebook = new Facebook(array('appId' => Configure::read('Facebook.appId'), 'secret' => Configure::read('Facebook.secretKey'),));
+        $facebook = new Facebook(array('appId' => Configure::read('Facebook.appId'), 'secret' => Configure::read('Facebook.secretKey'),));
         $this->layout = 'philly';
         $usuario = $this->Usuario->find('first',array('conditions' => array('Usuario.facebook_id' => $facebook_id)));
         if(!$usuario){
             $this->redirect(Router::url(array('controller' => 'Site' , 'action' => 'index'),true));
             exit();
         }
-        
+        $usuarioA = $facebook->getUser();
         $ingredientes = $this->Ingrediente->find('all');
         $ingredientes = Hash::combine($ingredientes, '{n}.Ingrediente.id', '{n}');
         $usuario['UsuarioIngrediente'] = Hash::combine($usuario['UsuarioIngrediente'], '{n}.ingrediente_id', '{n}');

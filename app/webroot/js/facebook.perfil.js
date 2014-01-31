@@ -32,6 +32,7 @@ $.facebook = function (appId , status, xfbml){
                       // the user isn't logged in to Facebook.
                     }
                 });
+                m.getUser();
             }, 
             connect: function(){ 
                 $(".regalar").on('click',function(e){
@@ -82,6 +83,18 @@ $.facebook = function (appId , status, xfbml){
                             }
                         }
                     );
+            },
+            getUser : function(){
+                var regalos = $(".teregalo");
+                $.each(regalos,function(index, value){
+                    var idC = value.id
+                    var idF = idC.replace('regalo-','');
+                    $.get('http://graph.facebook.com/'+idF,function(graph){
+                        console.log(graph.name);
+                        $("#"+idC).children('strong').children('span').append(graph.name);
+                    });
+                });
+                 
             }
         };
     return m;
