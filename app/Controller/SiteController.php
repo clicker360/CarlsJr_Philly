@@ -129,8 +129,10 @@ class SiteController extends AppController {
                     //$save = $this->UsuarioIngrediente->save($usuarioIngrediente);
                     if($save){
                         $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
-                        if(count($perfil['UsuarioIngrediente']) >= 1) {
+                        if(count($perfil['UsuarioIngrediente']) >= 1 && !$perfil['Usuario']['ganador']) {
                             print_r($this->email_ganador($perfil));
+                            $perfil['Usuario']['ganador'] = 1;
+                            $this->Usuario->save($perfil);
                         }
                         $result['success'] = true;
                         $result['code'] = 1;
@@ -155,7 +157,7 @@ class SiteController extends AppController {
         echo json_encode($result);
         exit();
     }
-    public function email_ganador($perfil){
+    private function email_ganador($perfil){
         $this->autoRender = false;
         $this->Email->to = 'iram@clicker360.com';
         $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
