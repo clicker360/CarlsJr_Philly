@@ -155,14 +155,14 @@ class SiteController extends AppController {
         echo json_encode($result);
         exit();
     }
-    public function email_ganador(){
+    public function email_ganador($perfil){
         $this->autoRender = false;
         $this->Email->to = 'iram@clicker360.com';
         $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
         $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
         $this->Email->sendAs = 'html';
         $this->Email->template = 'nuevo_ganador';
-        //$this->set(compact('datos'));
+        $this->set(compact('perfil'));
         if($this->Email->send())
             echo "si";
         else
