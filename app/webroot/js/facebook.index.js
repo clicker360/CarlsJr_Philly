@@ -53,7 +53,28 @@ $.facebook = function (appId , status, xfbml){
                 $.post('Site/saveDataAjax',data,function(save){
                     var user = JSON.parse(save);
                     if(user.success){
-                        window.location = 'Site/Perfil/'+user.data.Usuario.facebook_id;
+                        usuario = user.data.Usuario;
+                        FB.api(
+                                '/me/feed', 
+                                'POST', 
+                                {
+                                    method: 'stream.publish',
+                                    message: 'Ayúdame a ganarme una hamburguesa',
+                                    picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                    link : 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id,
+                                    name: 'Ayúdame a ganarme una hamburguesa',
+                                    caption: 'Ayúdame a ganarme una hamburguesa',
+                                    description: 'Ayúdame a ganarme una hamburguesa',
+                                    actions : {
+                                        name : 'Test',                                    
+                                        link : 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id
+                                    }
+                                }, 
+                                function(response) {
+                                    if(response)
+                                        window.location = 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id;
+                                }
+                            );
                     }else{
                         alert('Ocurrio un error.');
                     }
