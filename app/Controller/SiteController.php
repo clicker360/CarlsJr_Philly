@@ -159,7 +159,7 @@ class SiteController extends AppController {
         $this->autoRender = false;
         $Email = new CakeEmail();
         $Email->from(array('me@example.com' => 'My Site'));
-        $Email->to('you@example.com');
+        $Email->to('iram@clicker360.com');
         $Email->subject('About');
         $Email->send('My message');
                 
