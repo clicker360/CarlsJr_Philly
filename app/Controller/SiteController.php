@@ -19,7 +19,7 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-App::uses('Controller', 'Controller');
+App::uses('Controller', 'Controller','CakeEmail', 'Network/Email');
 
 /**
  * Application Controller
@@ -37,6 +37,7 @@ class SiteController extends AppController {
         'Ingrediente',
         'UsuarioIngrediente'
     );
+    public $components = array('Email');
 
     public function index() {
         $this->layout = 'philly';
@@ -98,7 +99,7 @@ class SiteController extends AppController {
         $this->set(compact('usuario','ingredientes'));
     }
     public function saveIngredientAjax(){
-        Configure::write('debug','0');
+        ///Configure::write('debug','0');
         $this->autoRender = false;
         $referer = split('/', $this->referer());
         $result = array();
@@ -117,6 +118,7 @@ class SiteController extends AppController {
                 $existeUsuario = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_regalo_facebook_id']);
                 $existePerfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
                 $existeIngrediente = $this->Ingrediente->findById($usuarioIngrediente['ingrediente_id']);
+
                 if($existeUsuario && $existePerfil && $existeIngrediente ){
                     try {
                         $save = $this->UsuarioIngrediente->save($usuarioIngrediente);
@@ -126,6 +128,10 @@ class SiteController extends AppController {
                     }
                     //$save = $this->UsuarioIngrediente->save($usuarioIngrediente);
                     if($save){
+                        $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
+                        if(count($perfil['UsuarioIngrediente']) >= 1) {
+                            print_r($this->email_ganador($perfil));
+                        }
                         $result['success'] = true;
                         $result['code'] = 1;
                         $result['data'] = $save;
@@ -148,6 +154,14 @@ class SiteController extends AppController {
         }
         echo json_encode($result);
         exit();
+    }
+    public function email_ganador(){
+        $Email = new CakeEmail();
+        $Email->from(array('me@example.com' => 'My Site'));
+        $Email->to('you@example.com');
+        $Email->subject('About');
+        $Email->send('My message');
+                
     }
 
 }
