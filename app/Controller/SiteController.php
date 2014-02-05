@@ -99,7 +99,7 @@ class SiteController extends AppController {
         $this->set(compact('usuario','ingredientes'));
     }
     public function saveIngredientAjax(){
-        ///Configure::write('debug','0');
+        Configure::write('debug','0');
         $this->autoRender = false;
         $referer = split('/', $this->referer());
         $result = array();
