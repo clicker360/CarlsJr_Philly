@@ -156,6 +156,7 @@ class SiteController extends AppController {
         exit();
     }
     public function email_ganador(){
+        $this->autoRender = false;
         $Email = new CakeEmail();
         $Email->from(array('me@example.com' => 'My Site'));
         $Email->to('you@example.com');
