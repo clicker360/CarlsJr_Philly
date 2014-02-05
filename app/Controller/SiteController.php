@@ -130,7 +130,7 @@ class SiteController extends AppController {
                     if($save){
                         $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
                         if(count($perfil['UsuarioIngrediente']) >= 1 && !$perfil['Usuario']['ganador']) {
-                            print_r($this->email_ganador($perfil));
+                            //print_r($this->email_ganador($perfil));
                             $perfil['Usuario']['ganador'] = 1;
                             $this->Usuario->save($perfil);
                         }

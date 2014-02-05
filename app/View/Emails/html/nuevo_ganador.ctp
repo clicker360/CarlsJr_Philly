@@ -16,7 +16,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-Nuevo ganador
-<?php
-print_r($perfil);
-?>
+Hay un nuevo ganador de una Philly, estos son sus datos:
+
+Nombre : <?php $perfil['Usuario']['name']; ?><br>
+Correo electrónico : <?php $perfil['Usuario']['email']; ?><br>
+Facebook : <?php $perfil['Usuario']['url']; ?><br>
