@@ -77,6 +77,32 @@ $.facebook = function (appId , status, xfbml){
                         ,function(save){    
                             var saveI = JSON.parse(save);
                             if(saveI.success){
+                                var usuarioA = ''
+                                $.get('http://graph.facebook.com/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,function(graph){
+                                    usuarioA = graph.name;                                    
+                                    console.log(usuarioA);
+                                    FB.api(
+                                        '/me/feed', 
+                                        'POST', 
+                                        {
+                                            method: 'stream.publish',
+                                            message: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
+                                            picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                            link : 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,
+                                            name: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
+                                            caption: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
+                                            description: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
+                                            actions : {
+                                                name : 'Test',                                    
+                                                link : 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id
+                                            }
+                                        }, 
+                                        function(response) {
+                                            if(response)
+                                                window.location = 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id;
+                                        }
+                                    );
+                                });
                                 //usuario = user.data.Usuario;
                                 //console.log(saveI);
                                 /*FB.api(
@@ -100,7 +126,7 @@ $.facebook = function (appId , status, xfbml){
                                                 window.location = 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id;
                                         }
                                     );*/
-                               location.reload();                                
+                               //location.reload();                                
                             }else{
                                 alert(saveI.message);
                             }
@@ -113,7 +139,6 @@ $.facebook = function (appId , status, xfbml){
                     var idC = value.id
                     var idF = idC.replace('regalo-','');
                     $.get('http://graph.facebook.com/'+idF,function(graph){
-                        console.log(graph.name);
                         $("#"+idC).children('strong').children('span').append(graph.name);
                     });
                 });
