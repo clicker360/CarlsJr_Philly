@@ -99,7 +99,8 @@ $.facebook = function (appId , status, xfbml){
                                         }, 
                                         function(response) {
                                             if(response)
-                                                window.location = 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id;
+                                                location.reload();
+                                                //window.location = 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id;
                                         }
                                     );
                                 });
