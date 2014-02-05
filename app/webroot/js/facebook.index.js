@@ -72,7 +72,7 @@ $.facebook = function (appId , status, xfbml){
                                 }, 
                                 function(response) {
                                     if(response)
-                                        window.location = 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id;
+                                        window.location = 'Site/Perfil/'+usuario.facebook_id;
                                 }
                             );
                     }else{
