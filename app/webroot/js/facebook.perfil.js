@@ -74,9 +74,8 @@ $.facebook = function (appId , status, xfbml){
                             perfilId : self.perfilId,
                             ingredienteId : self.ingredienteId
                         }
-                        ,function(save){    
-                            console.log(save);
-                            /*var saveI = JSON.parse(save);
+                        ,function(save){ 
+                            var saveI = JSON.parse(save);
                             if(saveI.success){
                                 var usuarioA = ''
                                 $.get('http://graph.facebook.com/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,function(graph){
@@ -99,14 +98,13 @@ $.facebook = function (appId , status, xfbml){
                                         }, 
                                         function(response) {
                                             if(response)
-                                                //location.reload();
-                                                //window.location = 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id;
+                                                location.reload();
                                         }
                                     );
                                 });                                                    
                             }else{
                                 alert(saveI.message);
-                            }*/
+                            }
                         }
                     );
             },

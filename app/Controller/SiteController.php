@@ -126,7 +126,7 @@ class SiteController extends AppController {
                         $result = false;
                         $code = $e->getCode();
                     }
-                    //$save = $this->UsuarioIngrediente->save($usuarioIngrediente);
+                    $save = $this->UsuarioIngrediente->save($usuarioIngrediente);
                     if($save){
                         $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
                         if(count($perfil['UsuarioIngrediente']) >= 1 && !$perfil['Usuario']['ganador']) {
@@ -165,10 +165,7 @@ class SiteController extends AppController {
         $this->Email->sendAs = 'html';
         $this->Email->template = 'nuevo_ganador';
         $this->set(compact('perfil'));
-        if($this->Email->send())
-            echo "si";
-        else
-            echo "no";
+        $this->Email->send();
     }
 
 }
