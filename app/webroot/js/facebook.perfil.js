@@ -75,12 +75,12 @@ $.facebook = function (appId , status, xfbml){
                             ingredienteId : self.ingredienteId
                         }
                         ,function(save){    
-                            var saveI = JSON.parse(save);
+                            console.log(save);
+                            /*var saveI = JSON.parse(save);
                             if(saveI.success){
                                 var usuarioA = ''
                                 $.get('http://graph.facebook.com/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,function(graph){
-                                    usuarioA = graph.name;                                    
-                                    console.log(usuarioA);
+                                    usuarioA = graph.name;   
                                     FB.api(
                                         '/me/feed', 
                                         'POST', 
@@ -99,38 +99,14 @@ $.facebook = function (appId , status, xfbml){
                                         }, 
                                         function(response) {
                                             if(response)
-                                                location.reload();
+                                                //location.reload();
                                                 //window.location = 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id;
                                         }
                                     );
-                                });
-                                //usuario = user.data.Usuario;
-                                //console.log(saveI);
-                                /*FB.api(
-                                        '/me/feed', 
-                                        'POST', 
-                                        {
-                                            method: 'stream.publish',
-                                            message: 'Ayúdame a ganarme una hamburguesa',
-                                            picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
-                                            link : 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id,
-                                            name: 'Ayúdame a ganarme una hamburguesa',
-                                            caption: 'Ayúdame a ganarme una hamburguesa',
-                                            description: 'Ayúdame a ganarme una hamburguesa',
-                                            actions : {
-                                                name : 'Test',                                    
-                                                link : 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id
-                                            }
-                                        }, 
-                                        function(response) {
-                                            if(response)
-                                                window.location = 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id;
-                                        }
-                                    );*/
-                               //location.reload();                                
+                                });                                                    
                             }else{
                                 alert(saveI.message);
-                            }
+                            }*/
                         }
                     );
             },
