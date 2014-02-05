@@ -157,12 +157,16 @@ class SiteController extends AppController {
     }
     public function email_ganador(){
         $this->autoRender = false;
-        $Email = new CakeEmail();
-        $Email->from(array('me@example.com' => 'My Site'));
-        $Email->to('iram@clicker360.com');
-        $Email->subject('About');
-        $Email->send('My message');
-                
+        $this->Email->to = 'iram@clicker360.com';
+        $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
+        $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
+        $this->Email->sendAs = 'html';
+        $this->Email->template = 'nuevo_ganador';
+        //$this->set(compact('datos'));
+        if($this->Email->send())
+            echo "si";
+        else
+            echo "no";
     }
 
 }
