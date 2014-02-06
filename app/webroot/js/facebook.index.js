@@ -59,7 +59,7 @@ $.facebook = function (appId , status, xfbml){
                                 'POST', 
                                 {
                                     method: 'stream.publish',
-                                    message: 'Ayúdame a ganar una Philly CheeSteak Burger.',
+                                    message: 'Ayúdame a ganar una Philly CheeSteak Burgera.',
                                     picture : document.domain+'/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
                                     link : document.domain+'/philly/Site/Perfil/'+usuario.facebook_id,
                                     name: 'Ayúdame a ganar una Philly CheeSteak Burger.',
