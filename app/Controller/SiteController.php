@@ -167,7 +167,7 @@ class SiteController extends AppController {
             $this->set(compact('perfil'));
             return $this->Email->send();
         }else if($template == 'cupon'){
-            $this->Email->to = $perfil['email'];
+            $this->Email->to = $perfil['Ganador']['email'];
             $this->Email->subject = 'Felicidades';
             $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
             $this->Email->sendAs = 'html';
