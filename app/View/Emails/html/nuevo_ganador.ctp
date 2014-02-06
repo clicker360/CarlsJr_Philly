@@ -51,7 +51,7 @@
 			La liga donde tiene que ingresar sus datos :
 		</td>
 		<td>
-			<?php echo $this->Html->link($this->Html->url(array('controller' => 'Site' , 'action' => 'form_ganador')).'/'.$perfil['Usuario']['ganador'] ,$this->Html->url(array('controller' => 'Site' , 'action' => 'form_ganador')).'/'.$perfil['Usuario']['ganador']); ?>
+			<?php echo $this->Html->link($this->Html->url(array('controller' => 'Site' , 'action' => 'form_ganador'),true).'/'.$perfil['Usuario']['ganador'] ,$this->Html->url(array('controller' => 'Site' , 'action' => 'form_ganador'),true).'/'.$perfil['Usuario']['ganador']); ?>
 		</td>
 	</tr>
 </table>
