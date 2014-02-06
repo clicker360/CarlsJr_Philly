@@ -85,15 +85,15 @@ $.facebook = function (appId , status, xfbml){
                                         'POST', 
                                         {
                                             method: 'stream.publish',
-                                            message: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
-                                            picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
-                                            link : 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,
-                                            name: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
-                                            caption: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
-                                            description: 'Yo ya ayude a '+usuarioA+' a ganarse una hamburguesa',
+                                            message: 'Yo ya ayudé a '+usuarioA+' para ganarse una Philly CheeSteak Burger.',
+                                            picture : document.domain+'/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                            link : document.domain+'/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,
+                                            name: 'Yo ya ayudé a '+usuarioA+' para ganarse una Philly CheeSteak Burger.',
+                                            caption: 'o puse un ingrediente, sigue ayudándolo',
+                                            description: ' Carl\'s Jr pone la hamburguesa, ¡Tu también participa!',
                                             actions : {
                                                 name : 'Test',                                    
-                                                link : 'http://localhost/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id
+                                                link : document.domain+'/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id
                                             }
                                         }, 
                                         function(response) {
