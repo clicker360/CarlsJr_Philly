@@ -15,36 +15,26 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-print_r($perfil);
 ?>
-<!--<table>
+<table>
 	<tr>
-		<td colspan="2">
-			Hay un nuevo ganador de una Philly, estos son sus datos:
+		<td>	
+		¡Felicidades <?php echo $perfil['Ganador']['nombre']; ?>!		
 		</td>
 	</tr>
 	<tr>
-		<td>
-			Nombre :
-		</td>
-		<td>
-			<?php echo $perfil['Usuario']['name']; ?>
+		<td>	
+		Ya tienes tus dos Phillys CheeseSteake de Carl's Jr.		
 		</td>
 	</tr>
 	<tr>
-		<td>
-			Correo electrónico :
-		</td>
-		<td>
-			<?php echo $perfil['Usuario']['email']; ?>
+		<td>	
+		Imprime este cupón y canjéalo en la sucursal <?php echo $perfil['Ganador']['sucursal'].', '.$perfil['Ganador']['estado']; ?>.		
 		</td>
 	</tr>
 	<tr>
-		<td>
-			Facebook :
+		<td>	
+		¡Gracias por participar y sigue pendiente de nuestras próximas promociones!		
 		</td>
-		<td>
-			<?php echo $perfil['Usuario']['url']; ?>
-		</td>
-	</tr>
-</table>-->
+	</tr>	
+</table>
