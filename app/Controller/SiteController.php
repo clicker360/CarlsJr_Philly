@@ -183,7 +183,7 @@ class SiteController extends AppController {
             debug($this->data);
             $usuario = $this->Usuario->findByGanador($this->data['Ganador']['key']);
             $ganador = $this->data;
-            $ganador['usuario_facebook_id'] = $usuario['Usuario']['facebook_id'];
+            $ganador['Ganador']['usuario_facebook_id'] = $usuario['Usuario']['facebook_id'];
             if($this->email_ganador($ganador, 'cupon')){                
                 $usuario['Usuario']['ganador'] = 0;
                 $this->Usuario->save($usuario);
