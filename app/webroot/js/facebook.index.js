@@ -19,10 +19,12 @@ $.facebook = function (appId , status, xfbml, site){
                       //var uid = response.authResponse.userID;
                       //var accessToken = response.authResponse.accessToken;
                       $("#conecta").on('click',function(e){
-                        e.preventDefault();
+                        
+                        //e.preventDefault();
                         FB.api('/me', function(response) {
                           m.saveData(response);                                
                         });
+                        return false;
                       });
                     } else if (response.status === 'not_authorized') {                        
                         m.connect();                           
