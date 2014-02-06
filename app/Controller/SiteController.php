@@ -204,6 +204,7 @@ class SiteController extends AppController {
         }
     }
     public function get_sucursales($estado){
+        header('Access-Control-Allow-Origin: *');  
         Configure::write('debug','0');
         $this->autoRender = false;
         if(!$estado)
