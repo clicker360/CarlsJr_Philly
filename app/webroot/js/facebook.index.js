@@ -59,15 +59,15 @@ $.facebook = function (appId , status, xfbml){
                                 'POST', 
                                 {
                                     method: 'stream.publish',
-                                    message: 'Ayúdame a ganarme una hamburguesa',
-                                    picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
-                                    link : 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id,
-                                    name: 'Ayúdame a ganarme una hamburguesa',
-                                    caption: 'Ayúdame a ganarme una hamburguesa',
-                                    description: 'Ayúdame a ganarme una hamburguesa',
+                                    message: 'Ayúdame a ganar una Philly CheeSteak Burger.',
+                                    picture : document.domain+'/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                    link : document.domain+'/philly/Site/Perfil/'+usuario.facebook_id,
+                                    name: 'Ayúdame a ganar una Philly CheeSteak Burger.',
+                                    caption: 'Carl`s Jr pone la hamburguesa.',
+                                    description: 'Haz click aquí para regalarme alguno de los ingredientes de mi Philly CheeSteak Burger.',
                                     actions : {
-                                        name : 'Test',                                    
-                                        link : 'http://localhost/philly/Site/Perfil/'+usuario.facebook_id
+                                        name : 'Participa',                                    
+                                        link : document.domain+'/philly/Site/Perfil/'+usuario.facebook_id
                                     }
                                 }, 
                                 function(response) {
