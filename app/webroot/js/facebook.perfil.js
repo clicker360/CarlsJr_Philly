@@ -86,14 +86,14 @@ $.facebook = function (appId , status, xfbml){
                                         {
                                             method: 'stream.publish',
                                             message: 'Yo ya ayudé a '+usuarioA+' para ganarse una Philly CheeSteak Burger.',
-                                            picture : 'http://carlsjr.com.mx/templates/carlsjr/images/logo.png',
-                                            link : document.domain+'/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,
+                                            picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                            link : _site+'/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id,
                                             name: 'Yo ya ayudé a '+usuarioA+' para ganarse una Philly CheeSteak Burger.',
                                             caption: 'o puse un ingrediente, sigue ayudándolo',
                                             description: ' Carl\'s Jr pone la hamburguesa, ¡Tu también participa!',
                                             actions : {
                                                 name : 'Test',                                    
-                                                link : document.domain+'/philly/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id
+                                                link : _site+'/Site/Perfil/'+saveI.data.UsuarioIngrediente.usuario_facebook_id
                                             }
                                         }, 
                                         function(response) {

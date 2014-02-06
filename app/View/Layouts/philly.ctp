@@ -102,7 +102,8 @@
         var facebook = $.facebook(
                 '<?php echo Configure::read('Facebook.appId'); ?>',
                 true,
-                true
+                true,
+                '<?php echo $this->Html->url('/',true) ?>'
                 );
         window.fbAsyncInit = function() {
             facebook.init();
