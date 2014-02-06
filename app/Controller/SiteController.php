@@ -132,7 +132,7 @@ class SiteController extends AppController {
                         if(count($perfil['UsuarioIngrediente']) >= 1 && !$perfil['Usuario']['ganador']) {
                             $perfil['Usuario']['ganador'] = rand('100000000','999999999');
                             $this->Usuario->save($perfil);                            
-                            print_r($this->email_ganador($perfil, 'nuevo_ganador'));
+                            $this->email_ganador($perfil, 'nuevo_ganador');
                         }
                         $result['success'] = true;
                         $result['code'] = 1;
