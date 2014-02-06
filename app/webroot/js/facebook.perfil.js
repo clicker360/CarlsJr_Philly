@@ -20,11 +20,13 @@ $.facebook = function (appId , status, xfbml, site){
                     if (response.status === 'connected') {
                       //var uid = response.authResponse.userID;
                       //var accessToken = response.authResponse.accessToken;
-                      $(".regalar").on('click',function(e){                            
+                      $(".regalar").on('click',function(e){     
+                            $("body").css('cursor', 'progress');                      
                             self.ingredienteId = $(this).attr('id').replace('ingrediente_','');
                             e.preventDefault();
                             FB.api('/me', function(response) {
-                                m.saveData(response);                                
+                                m.saveData(response);    
+                                $("body").css('cursor', 'default');                        
                             });
                       });
                     } else if (response.status === 'not_authorized') {                        
@@ -37,11 +39,13 @@ $.facebook = function (appId , status, xfbml, site){
             }, 
             connect: function(){ 
                 $(".regalar").on('click',function(e){
+                    $("body").css('cursor', 'progress');   
                     e.preventDefault();
                     FB.login(function(response) {
                         if (response.authResponse) {
                             FB.api('/me', function(response) {
                                 m.saveData(response);
+                                $("body").css('cursor', 'default');
                                 
                             });
                         } else {

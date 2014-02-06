@@ -147,104 +147,13 @@ $ingredientesTotal = $ingredientes;
                                 <p>regaló <b><?php echo $ingredientes[$i]['Ingrediente']['nombre']; ?></b> de tu CheeseSteak</p>
                             </div>
                         <?php }else{ ?>
-                            <a href="" id="ingrediente_<?php echo $ingredientes[$i]['Ingrediente']['id']; ?>" class="regalar btn-ingr">Regalar</a>
+                            <a href="" id="ingrediente_<?php echo $ingredientes[$i]['Ingrediente']['id']; ?>" class="regalar regalarBack btn-ingr">Regalar</a>
                             <!--<a href="" class="btn-ingr solicitar">Solicitar</a>-->
                         <?php } ?>
                     </div>
                 </li>
             <?php } ?>
             
-            <!--<li id="ingr-foot-2" class="descr-foot lotienes">
-                <div class="mask"></div>
-                <div class="head-ingr">
-                    <h5>Bollo con ajonjolí</h5>
-                </div>
-                <div class="body-ingr">
-                    <a href="" class="btn-ingr">Regalar</a>
-                    <a href="" class="btn-ingr solicitar">Solicitar</a>
-
-                    <div class="teregalo">
-                        <strong><i class="fa fa-check"></i> Jonsy jones</strong>
-                        <p>regaló el <b>pan</b> de tu CheeseSteak</p>
-                    </div>
-
-                </div>
-            </li>
-            <li id="ingr-foot-3" class="descr-foot inactivo lotienes">
-                <div class="mask"></div>
-                <div class="head-ingr">
-                    <h5>Bollo con ajonjolí</h5>
-                </div>
-                <div class="body-ingr">
-                    <a href="" class="btn-ingr">Regalar</a>
-                    <a href="" class="btn-ingr solicitar">Solicitar</a>
-
-                    <div class="teregalo">
-                        <strong><i class="fa fa-check"></i> Jonsy jones</strong>
-                        <p>regaló el <b>pan</b> de tu CheeseSteak</p>
-                    </div>
-                </div>
-            </li>
-            <li id="ingr-foot-4" class="descr-foot inactivo">
-                <div class="mask"></div>
-                <div class="head-ingr">
-                    <h5>Bollo con ajonjolí</h5>
-                </div>
-                <div class="body-ingr">
-                    <a href="" class="btn-ingr">Regalar</a>
-                    <a href="" class="btn-ingr solicitar">Solicitar</a>
-
-                    <div class="teregalo">
-                        <strong><i class="fa fa-check"></i> Jonsy jones</strong>
-                        <p>regaló el <b>pan</b> de tu CheeseSteak</p>
-                    </div>
-                </div>
-            </li>
-            <li id="ingr-foot-5" class="descr-foot inactivo">
-                <div class="mask"></div>
-                <div class="head-ingr">
-                    <h5>Bollo con ajonjolí</h5>
-                </div>
-                <div class="body-ingr">
-                    <a href="" class="btn-ingr">Regalar</a>
-                    <a href="" class="btn-ingr solicitar">Solicitar</a>
-
-                    <div class="teregalo">
-                        <strong><i class="fa fa-check"></i> Jonsy jones</strong>
-                        <p>regaló el <b>pan</b> de tu CheeseSteak</p>
-                    </div>
-                </div>
-            </li>
-            <li id="ingr-foot-6" class="descr-foot inactivo">
-                <div class="mask"></div>
-                <div class="head-ingr">
-                    <h5>Bollo con ajonjolí</h5>
-                </div>
-                <div class="body-ingr">
-                    <a href="" class="btn-ingr">Regalar</a>
-                    <a href="" class="btn-ingr solicitar">Solicitar</a>
-
-                    <div class="teregalo">
-                        <strong><i class="fa fa-check"></i> Jonsy jones</strong>
-                        <p>regaló el <b>pan</b> de tu CheeseSteak</p>
-                    </div>
-                </div>
-            </li>
-            <li id="ingr-foot-7" class="descr-foot inactivo">
-                <div class="mask"></div>
-                <div class="head-ingr">
-                    <h5>Bollo con ajonjolí</h5>
-                </div>
-                <div class="body-ingr">
-                    <a href="" class="btn-ingr">Regalar</a>
-                    <a href="" class="btn-ingr solicitar">Solicitar</a>
-
-                    <div class="teregalo">
-                        <strong><i class="fa fa-check"></i> Jonsy jones</strong>
-                        <p>regaló el <b>pan</b> de tu CheeseSteak</p>
-                    </div>
-                </div>
-            </li>-->
         </ul>
     </div>
 
