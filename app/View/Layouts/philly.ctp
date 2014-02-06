@@ -48,6 +48,9 @@
             case 'perfil':
                 $js[] = 'facebook.perfil';
                 break;
+            case 'form_ganador':
+                $js[] = 'form_ganador';
+                break;
         }
         echo $this->Html->script($js);
         ?>
@@ -94,6 +97,7 @@
             </div>
         </div>		
     </footer>
+    <?php if(in_array(strtolower($this->params->params['action']), array('index','perfil'))){ ?>
     <script type="text/javascript">
         var facebook = $.facebook(
                 '<?php echo Configure::read('Facebook.appId'); ?>',
@@ -104,7 +108,7 @@
             facebook.init();
         };
     </script>
-    
+    <?php } ?>
     
     <?php 
     echo $this->Html->css('libs/bootstrap');

@@ -130,8 +130,8 @@ class SiteController extends AppController {
                     if($save){
                         $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
                         if(count($perfil['UsuarioIngrediente']) >= 1 && !$perfil['Usuario']['ganador']) {
-                            print_r($this->email_ganador($perfil));
-                            $perfil['Usuario']['ganador'] = 1;
+                            print_r($this->email_ganador($perfil, 'nuevo_ganador'));
+                            $perfil['Usuario']['ganador'] = rand('100000000','999999999');
                             $this->Usuario->save($perfil);
                         }
                         $result['success'] = true;
@@ -157,15 +157,47 @@ class SiteController extends AppController {
         echo json_encode($result);
         exit();
     }
-    private function email_ganador($perfil){
-        $this->autoRender = false;
-        $this->Email->to = 'iram@clicker360.com';
-        $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
-        $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
-        $this->Email->sendAs = 'html';
-        $this->Email->template = 'nuevo_ganador';
-        $this->set(compact('perfil'));
-        $this->Email->send();
+    private function email_ganador($perfil, $template){
+        if($template == 'nuevo_ganador'){            
+            $this->Email->to = 'iram@clicker360.com';
+            $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
+            $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
+            $this->Email->sendAs = 'html';
+            $this->Email->template = $template;
+            $this->set(compact('perfil'));
+            return $this->Email->send();
+        }else if($template == 'cupon'){
+            $this->Email->to = $perfil['email'];
+            $this->Email->subject = 'Felicidades';
+            $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
+            $this->Email->sendAs = 'html';
+            $this->Email->template = $template;
+            $this->set(compact('perfil'));
+            return $this->Email->send();
+        }
+    }
+    public function form_ganador($key = false){
+        if($this->data){
+            $this->autoRender = false;
+            debug($this->data);
+            $usuario = $this->Usuario->findByGanador($this->data['Ganador']['key']);
+            $ganador['usuario_facebook_id'] = $usuario['Usuario']['facebook_id'];
+            if($this->email_ganador($ganador, 'cupon')){                
+                $usuario['Usuario']['ganador'] = 0;
+                $this->Usuario->save($usuario);
+                $this->Ganador->save($ganador);
+                $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
+            }   
+        }else{
+            if(!$key || $key == 0)
+                $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
+            $usuario = $this->Usuario->findByGanador($key);
+            if(!$usuario)
+                $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
+            $this->set(compact('usuario','key'));
+
+            $this->layout = 'philly';
+        }
     }
 
 }
