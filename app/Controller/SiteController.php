@@ -131,7 +131,7 @@ class SiteController extends AppController {
                     //$save = $this->UsuarioIngrediente->save($usuarioIngrediente);
                     if($save){
                         $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
-                        if(count($perfil['UsuarioIngrediente']) >= 1 && !$perfil['Usuario']['ganador']) {
+                        if(count($perfil['UsuarioIngrediente']) >= 7 && !$perfil['Usuario']['ganador']) {
                             $perfil['Usuario']['ganador'] = rand('100000000','999999999');
                             $this->Usuario->save($perfil);                            
                             $this->email_ganador($perfil, 'nuevo_ganador');
