@@ -75,6 +75,7 @@ $.facebook = function (appId , status, xfbml){
                             ingredienteId : self.ingredienteId
                         }
                         ,function(save){ 
+                            console.log(save);
                             var saveI = JSON.parse(save);
                             if(saveI.success){
                                 var usuarioA = ''
