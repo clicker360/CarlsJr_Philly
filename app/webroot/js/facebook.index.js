@@ -61,7 +61,7 @@ $.facebook = function (appId , status, xfbml, site){
                                 {
                                     method: 'stream.publish',
                                     message: 'Ayúdame a ganar una Philly CheeSteak Burger.',
-                                    picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                    picture : 'http://carlsjr.com.mx/templates/carlsjr/images/logo.png',
                                     link : _site+'/Site/Perfil/'+usuario.facebook_id,
                                     name: 'Ayúdame a ganar una Philly CheeSteak Burger.',
                                     caption: 'Carl`s Jr pone la hamburguesa.',
@@ -73,8 +73,8 @@ $.facebook = function (appId , status, xfbml, site){
                                 }, 
                                 function(response) {
                                     console.log(response);
-                                    //if(response)
-                                        //window.location = 'Site/Perfil/'+usuario.facebook_id;
+                                    if(response)
+                                        window.location = 'Site/Perfil/'+usuario.facebook_id;
                                 }
                             );
                     }else{
