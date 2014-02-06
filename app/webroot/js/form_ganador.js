@@ -18,7 +18,12 @@ $(function(){
         $.get(
             'http://dev.clicker360.com/philly/Site/get_sucursales/'+$(this).val(),
             function(sucursales){
-                console.log(sucursales);
+                var sucursalesA = JSON.parse(sucursales);
+                console.log(sucursalesA);
+                $("#GanadorSucursal").html('');
+                $.each(sucursalesA,function(k , v){
+                    $("#GanadorSucursal").append('<option value="' + k + '">' + v +'</option>');
+                })
     })
             }
         );
