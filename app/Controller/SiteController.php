@@ -35,7 +35,8 @@ class SiteController extends AppController {
     public $uses = array(
         'Usuario',
         'Ingrediente',
-        'UsuarioIngrediente'
+        'UsuarioIngrediente',
+        'Ganador'
     );
     public $components = array('Email');
 
