@@ -15,8 +15,9 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+print_r($perfil);
 ?>
-<table>
+<!--<table>
 	<tr>
 		<td colspan="2">
 			Hay un nuevo ganador de una Philly, estos son sus datos:
@@ -46,12 +47,4 @@
 			<?php echo $perfil['Usuario']['url']; ?>
 		</td>
 	</tr>
-	<tr>
-		<td>
-			La liga donde tiene que ingresar sus datos :
-		</td>
-		<td>
-			<?php echo $this->Html->link($this->Html->url(array('controller' => 'Site' , 'action' => 'form_ganador')).'/'.$perfil['Usuario']['ganador'] ,$this->Html->url(array('controller' => 'Site' , 'action' => 'form_ganador')).'/'.$perfil['Usuario']['ganador']); ?>
-		</td>
-	</tr>
-</table>
+</table>-->

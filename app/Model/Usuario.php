@@ -40,6 +40,12 @@ class Usuario extends AppModel {
             'foreignKey' => 'usuario_facebook_id'
         )
     );
+    public $hasOne = array(
+        'Ganador' => array(
+            'foreignKey' => 'usuario_facebook_id',
+            'conditions' => array('Ganador.id >= ' => '1'),
+        )
+    );
     
     /*public $hasOne = array(
         'Historia' => array(
