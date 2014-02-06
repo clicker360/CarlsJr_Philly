@@ -187,9 +187,9 @@ class SiteController extends AppController {
             if($this->email_ganador($ganador, 'cupon')){                
                 $usuario['Usuario']['ganador'] = 0;
                 $this->Usuario->save($usuario);
-                $this->Ganador->save($ganador);
-                $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
+                $this->Ganador->save($ganador);                
             }   
+            $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
         }else{
             if(!$key || $key == 0)
                 $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
