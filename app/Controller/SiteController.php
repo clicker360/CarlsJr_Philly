@@ -36,7 +36,8 @@ class SiteController extends AppController {
         'Usuario',
         'Ingrediente',
         'UsuarioIngrediente',
-        'Ganador'
+        'Ganador',
+        'Sucursal'
     );
     public $components = array('Email');
 
@@ -178,6 +179,7 @@ class SiteController extends AppController {
         }
     }
     public function form_ganador($key = false){
+        $estados = $this->Sucursal->find('list',array('fields' => array('Sucursal.estado', 'Sucursal.estado') ,'group' => array('Sucursal.estado')));
         if($this->data){
             $this->autoRender = false;
             debug($this->data);
@@ -196,10 +198,18 @@ class SiteController extends AppController {
             $usuario = $this->Usuario->findByGanador($key);
             if(!$usuario)
                 $this->redirect(Router::url(array('controller' => 'Site','action' =>'index'),true));
-            $this->set(compact('usuario','key'));
+            $this->set(compact('usuario','key','estados'));
 
             $this->layout = 'philly';
         }
+    }
+    public function get_sucursales($estado){
+        Configure::write('debug','0');
+        $this->autoRender = false;
+        if(!$estado)
+            exit();
+        $sucursales = $this->Sucursal->find('list',array('fields' => array('Sucursal.nombre' , 'Sucursal.nombre'),'conditions' => array('Sucursal.estado' => $estado)));
+        echo json_encode($sucursales);
     }
 
 }

@@ -17,7 +17,8 @@
                     echo $this->Form->create('Ganador');
                     echo $this->Form->input('Ganador.nombre',array('label' => 'Nombre: ','default' => $usuario['Usuario']['name'] ));
                     echo $this->Form->input('Ganador.email',array('label' => 'Correo electrónico: ','default' => $usuario['Usuario']['email']));
-                    echo $this->Form->input('Ganador.sucursal',array('label' => 'Sucursal: ','empty' => true,'options' => array('Sucursal 1' => 'Sucursal 1', 'Sucursal 2' => 'Sucursal 2')));
+                    echo $this->Form->input('Ganador.estado',array('label' => 'Estado: ','empty' => true,'options' => $estados));
+                    echo $this->Form->input('Ganador.sucursal',array('label' => 'Sucursal: ','empty' => true,'options' => array()));
                     echo $this->Form->hidden('Ganador.key',array('default' => $key));
                     echo $this->Form->end('Enviar');
                     ?>

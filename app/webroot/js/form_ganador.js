@@ -13,7 +13,16 @@ $(function(){
         if(!valid)
             alert("Existen errores en el formulario");
         return valid;
+    });
+    $("#GanadorEstado").on('change',function(){
+        $.get(
+            document.domain + '/Site/get_sucursales/'+$(this).val(),
+            function(sucursales){
+                console.log(sucursales);
     })
+            }
+        );
+        
 });
 function validar_email(valor)
     {
