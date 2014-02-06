@@ -2,11 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-$.facebook = function (appId , status, xfbml){    
+$.facebook = function (appId , status, xfbml, site){    
     var _appId = appId;
     var _status = status;
     var _xfbml = xfbml;
     var self = this;
+    var _site = site
     var m = {            
             init: function() {
                 self.perfilId = $("#perfilId").val();
