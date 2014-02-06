@@ -2,10 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-$.facebook = function (appId , status, xfbml){    
+$.facebook = function (appId , status, xfbml, site){    
     var _appId = appId;
     var _status = status;
     var _xfbml = xfbml;
+    var _site = site;
     var m = {            
             init: function() { 
                  FB.init({
@@ -59,20 +60,21 @@ $.facebook = function (appId , status, xfbml){
                                 'POST', 
                                 {
                                     method: 'stream.publish',
-                                    message: 'Ayúdame a ganar una Philly CheeSteak Burgera.',
-                                    picture : document.domain+'/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
-                                    link : document.domain+'/philly/Site/Perfil/'+usuario.facebook_id,
+                                    message: 'Ayúdame a ganar una Philly CheeSteak Burger.',
+                                    picture : 'http://localhost/philly/images/Philly-Version3-1-assets/Philly_Cheese_Steak.png',
+                                    link : _site+'/Site/Perfil/'+usuario.facebook_id,
                                     name: 'Ayúdame a ganar una Philly CheeSteak Burger.',
                                     caption: 'Carl`s Jr pone la hamburguesa.',
                                     description: 'Haz click aquí para regalarme alguno de los ingredientes de mi Philly CheeSteak Burger.',
                                     actions : {
                                         name : 'Participa',                                    
-                                        link : document.domain+'/philly/Site/Perfil/'+usuario.facebook_id
+                                        link : _site+'/Site/Perfil/'+usuario.facebook_id
                                     }
                                 }, 
                                 function(response) {
-                                    if(response)
-                                        window.location = 'Site/Perfil/'+usuario.facebook_id;
+                                    console.log(response);
+                                    //if(response)
+                                        //window.location = 'Site/Perfil/'+usuario.facebook_id;
                                 }
                             );
                     }else{
