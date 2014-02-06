@@ -16,7 +16,7 @@ $(function(){
     });
     $("#GanadorEstado").on('change',function(){
         $.get(
-            document.domain + '/Site/get_sucursales/'+$(this).val(),
+            'http://dev.clicker360.com/philly/Site/get_sucursales/'+$(this).val(),
             function(sucursales){
                 console.log(sucursales);
     })
