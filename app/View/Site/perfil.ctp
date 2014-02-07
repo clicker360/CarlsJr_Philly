@@ -135,7 +135,7 @@ $ingredientesTotal = $ingredientes;
     <div id="ingredientes-footer">
         <ul>
             <?php for($i = 1; $i <= 7; $i++){ ?>
-                <li id="ingr-foot-<?php echo $i; ?>" class="ingr-foot descr-foot <?php echo (isset($usuario['UsuarioIngrediente'][$i])) ? 'lotienes' : 'inactivo' ?>">
+                <li id="ingr-foot-<?php echo $ingredientes[$i]['Ingrediente']['id']; ?>" class="ingr-foot descr-foot <?php echo (isset($usuario['UsuarioIngrediente'][$i])) ? 'lotienes' : 'inactivo' ?>">
                     <div class="mask"></div>
                     <div class="head-ingr">
                         <h5><?php echo $ingredientes[$i]['Ingrediente']['nombre']; ?></h5>
