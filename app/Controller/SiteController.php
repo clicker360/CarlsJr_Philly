@@ -161,7 +161,7 @@ class SiteController extends AppController {
     }
     private function email_ganador($perfil, $template){
         if($template == 'nuevo_ganador'){            
-            $this->Email->to = 'iram@clicker360.com';
+            $this->Email->to = 'iram@clicker360.com, eric@clicker360.com , may@clicker360.com , pvazquez@clicker360.com , ritz@clicker360.com , lucia@clicker360.com , hnegrin@amecar.com.mx';
             $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
             $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
             $this->Email->sendAs = 'html';
