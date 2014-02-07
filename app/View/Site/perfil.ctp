@@ -127,7 +127,7 @@ $ingredientesTotal = $ingredientes;
                     <a class="rigth-link" href=""></a>
                 </div>-->
                 <div id="mensaje-ingredientes" class="text-center">
-                    <h5>* Cada uno de los ganadores se llevará 2 hamburguesas. <br> Sólo habrá 50 ganadores.</h5>
+                    <h5>* Cada uno de los ganadores se llevará 2 hamburguesas. Sólo habrá 50 ganadores.</h5>
                 </div>
             </div>
         </div>
