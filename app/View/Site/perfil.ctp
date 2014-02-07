@@ -48,7 +48,7 @@ $ingredientesTotal = $ingredientes;
                     <?php foreach($ingredientesTotal as $ki => $i){ ?>
                         <li id="ingr-desc-<?php echo $i['Ingrediente']['id']; ?>" class=" ingr-desc <?php echo ($ki == 1) ? 'active' : ''; ?>">
                             <h3><?php echo $i['Ingrediente']['nombre']; ?></h3>
-                            <p><?php echo $i['Ingrediente']['descripcion']; ?></p>
+                            <!--<p><?php echo $i['Ingrediente']['descripcion']; ?></p>-->
                         </li>
                     <?php } ?>
                     <!--<li id="ingr-desc-1" class="active">
@@ -127,7 +127,7 @@ $ingredientesTotal = $ingredientes;
                     <a class="rigth-link" href=""></a>
                 </div>-->
                 <div id="mensaje-ingredientes" class="text-center">
-                    <h5>Selecciona Lorem ipsum dolor sit amet, consectetur.</h5>
+                    <h5>* Cada uno de los ganadores se llevará 2 hamburguesas. <br> Sólo habrá 50 ganadores.</h5>
                 </div>
             </div>
         </div>
