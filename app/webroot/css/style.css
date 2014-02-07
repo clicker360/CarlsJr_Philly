@@ -276,17 +276,17 @@ Stylesheet: Main Stylesheet
 #paso2 #ingredientes-footer ul li#ingr-foot-2 .body-ingr a.btn-ingr:focus {
   background: #775941;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-3 .head-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .head-ingr {
   background: #f1cf4c;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr {
   background: #fcf5da;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr {
   background: #f1cf4c;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:hover,
-#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:focus {
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:focus {
   background: #edc21d;
 }
 #paso2 #ingredientes-footer ul li#ingr-foot-4 .head-ingr {
@@ -318,17 +318,17 @@ Stylesheet: Main Stylesheet
 #paso2 #ingredientes-footer ul li#ingr-foot-5 .body-ingr a.btn-ingr:focus {
   background: #492c02;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-6 .head-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .head-ingr {
   background: #a4ce35;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr {
   background: #e5f1c5;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr {
   background: #a4ce35;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:hover,
-#paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:focus {
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:focus {
   background: #85a729;
 }
 #paso2 #ingredientes-footer ul li#ingr-foot-7 .head-ingr {
