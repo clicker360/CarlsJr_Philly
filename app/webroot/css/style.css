@@ -292,6 +292,9 @@ Stylesheet: Main Stylesheet
 #paso2 #ingredientes-footer ul li#ingr-foot-4 .head-ingr {
   background: #bdbdbd;
 }
+#paso2 #ingredientes-footer ul li .head-ingr {
+  height: 70px;
+}
 #paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr {
   background: #f0f0f0;
 }
