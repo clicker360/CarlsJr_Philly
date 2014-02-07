@@ -250,6 +250,27 @@ Stylesheet: Main Stylesheet
   color: #000000;
   padding: 5px;
 }
+#ingr-desc-1 h3{
+  color: #d9a075;
+}
+#ingr-desc-2 h3{
+  color: #987253;
+}
+#ingr-desc-3 h3{
+  color: #e5f1c5;
+}
+#ingr-desc-4 h3{
+  color: #fba744;
+}
+#ingr-desc-5 h3{
+  color: #7b4a03;
+}
+#ingr-desc-6 h3{
+  color: #a4a4a4;
+}
+#ingr-desc-7 h3{
+  color: #f1cf4c;
+}
 #paso2 #ingredientes-footer ul li#ingr-foot-1 .head-ingr {
   background: #d9a075;
 }
