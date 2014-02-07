@@ -131,7 +131,7 @@ class SiteController extends AppController {
                     //$save = $this->UsuarioIngrediente->save($usuarioIngrediente);
                     if($save){
                         $perfil = $this->Usuario->findByFacebookId($usuarioIngrediente['usuario_facebook_id']);
-                        if(count($perfil['UsuarioIngrediente']) >= 7 && !$perfil['Usuario']['ganador']) {
+                        if(count($perfil['UsuarioIngrediente']) == 7 && !$perfil['Usuario']['ganador']) {
                             $perfil['Usuario']['ganador'] = rand('100000000','999999999');
                             $this->Usuario->save($perfil);                            
                             $this->email_ganador($perfil, 'nuevo_ganador');
@@ -161,7 +161,8 @@ class SiteController extends AppController {
     }
     private function email_ganador($perfil, $template){
         if($template == 'nuevo_ganador'){            
-            $this->Email->to = 'iram@clicker360.com, eric@clicker360.com , may@clicker360.com , pvazquez@clicker360.com , ritz@clicker360.com , lucia@clicker360.com , hnegrin@amecar.com.mx';
+            $this->Email->to = 'iram@clicker360.com';
+            $this->Email->cc = array('may@clicker360.com','pvazquez@clicker360.com','ritz@clicker360.com','lucia@clicker360.com','eric@clicker360.com','hnegrin@amecar.com.mx');		
             $this->Email->subject = 'Nuevo ganador Carls Jr. Philly';
             $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
             $this->Email->sendAs = 'html';
@@ -170,6 +171,7 @@ class SiteController extends AppController {
             return $this->Email->send();
         }else if($template == 'cupon'){
             $this->Email->to = $perfil['Ganador']['email'];
+	       $this->Email->cc = array('eric@clicker360.com','hnegrin@amecar.com.mx','iram@clicker360.com','lucia@clicker360.com');
             $this->Email->subject = 'Felicidades';
             $this->Email->from = 'Contacto <contacto@carlsjr.com.mx>';
             $this->Email->sendAs = 'html';
