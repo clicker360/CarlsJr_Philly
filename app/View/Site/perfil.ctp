@@ -46,7 +46,7 @@ $ingredientesTotal = $ingredientes;
             <div class="ingrediente-desc text-center">
                 <ul>
                     <?php foreach($ingredientesTotal as $ki => $i){ ?>
-                        <li id="ingr-desc-<?php echo $i['Ingrediente']['id']; ?>" class=" ingr-desc <?php echo ($ki == 1) ? 'active' : ''; ?>">
+                        <li id="ingr-desc-<?php echo $i['Ingrediente']['orden']; ?>" class=" ingr-desc <?php echo ($ki == 1) ? 'active' : ''; ?>">
                             <h3><?php echo $i['Ingrediente']['nombre']; ?></h3>
                             <!--<p><?php echo $i['Ingrediente']['descripcion']; ?></p>-->
                         </li>
