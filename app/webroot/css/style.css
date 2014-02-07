@@ -289,20 +289,20 @@ Stylesheet: Main Stylesheet
 #paso2 #ingredientes-footer ul li#ingr-foot-6 .body-ingr a.btn-ingr:focus {
   background: #edc21d;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-4 .head-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .head-ingr {
   background: #bdbdbd;
 }
 #paso2 #ingredientes-footer ul li .head-ingr {
   height: 70px;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr {
   background: #f0f0f0;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr {
   background: #bdbdbd;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr:hover,
-#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr:focus {
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr:focus {
   background: #a4a4a4;
 }
 #paso2 #ingredientes-footer ul li#ingr-foot-5 .head-ingr {
@@ -331,17 +331,17 @@ Stylesheet: Main Stylesheet
 #paso2 #ingredientes-footer ul li#ingr-foot-3 .body-ingr a.btn-ingr:focus {
   background: #85a729;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-7 .head-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .head-ingr {
   background: #fba744;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr {
   background: #feedda;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr {
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr {
   background: #fba744;
 }
-#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr:hover,
-#paso2 #ingredientes-footer ul li#ingr-foot-7 .body-ingr a.btn-ingr:focus {
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr:hover,
+#paso2 #ingredientes-footer ul li#ingr-foot-4 .body-ingr a.btn-ingr:focus {
   background: #fa9012;
 }
 #paso2 #ingredientes-footer ul li.descr-foot.inactivo {
